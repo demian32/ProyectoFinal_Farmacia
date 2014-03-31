@@ -1,0 +1,48 @@
+CREATE TABLE Medicamento(
+ID_medicamento  integer,
+composicion_quimica varchar2(80),
+fecha_vencimiento DATE ,
+precio float,
+CONSTRAINT ID_medicamento_pk PRIMARY KEY(ID_medicamento))
+
+CREATE TABLE Laboratorio(
+ID_laboratorio integer,
+ID_medicamento integer,
+Nombre varchar2(80),
+CONSTRAINT ID_medicamento_fk_la FOREIGN KEY(ID_medicamento)
+REFERENCES Medicamento(ID_medicamento),
+CONSTRAINT ID_laboratorio_pk PRIMARY KEY(ID_laboratorio))
+
+
+CREATE TABLE Uso_terapeutico(
+ID_terapeutico integer,
+ID_medicamento integer,
+Nombre varchar2(80),
+CONSTRAINT ID_medicamento_fk_te FOREIGN KEY(ID_medicamento)
+REFERENCES Medicamento(ID_medicamento),
+CONSTRAINT ID_terapeutico_pk PRIMARY KEY(ID_terapeutico))
+
+
+CREATE TABLE Concentracion(
+ID_concentracion integer,
+ID_medicamento integer,
+Nombre varchar2(80),
+CONSTRAINT ID_medicamento_fk_co FOREIGN KEY(ID_medicamento)
+REFERENCES Medicamento(ID_medicamento),
+CONSTRAINT ID_concentracion_pk PRIMARY KEY(ID_concentracion))
+
+CREATE TABLE Presentacion(
+ID_presentacion integer,
+ID_medicamento integer,
+Nombre varchar2(80),
+CONSTRAINT ID_medicamento_fk_pre FOREIGN KEY(ID_medicamento)
+REFERENCES Medicamento(ID_medicamento),
+CONSTRAINT ID_presentacion_pk PRIMARY KEY(ID_presentacion))
+
+CREATE TABLE Nombre_comercial(
+ID_comercial integer,
+ID_medicamento integer,
+Nombre varchar2(80),
+CONSTRAINT ID_medicamento_fk_no FOREIGN KEY(ID_medicamento)
+REFERENCES Medicamento(ID_medicamento),
+CONSTRAINT ID_comercial_pk PRIMARY KEY(ID_comercial))

@@ -14,15 +14,16 @@ import java.sql.Date;
 public class Medicamento {
     private  int ID_medicamento;
             private String composicion_quimica;
-            private Date fecha_vecimiento;
+            private long fecha_vecimiento;
             private float precio;
 
-    public Medicamento(int ID_medicamento, String composicion_quimica, Date fecha_vecimiento, float precio) {
+    public Medicamento(int ID_medicamento, String composicion_quimica, long fecha_vecimiento, float precio) {
         this.ID_medicamento = ID_medicamento;
         this.composicion_quimica = composicion_quimica;
         this.fecha_vecimiento = fecha_vecimiento;
         this.precio = precio;
     }
+
 
     public int getID_medicamento() {
         return ID_medicamento;
@@ -40,11 +41,11 @@ public class Medicamento {
         this.composicion_quimica = composicion_quimica;
     }
 
-    public Date getFecha_vecimiento() {
+    public long getFecha_vecimiento() {
         return fecha_vecimiento;
     }
 
-    public void setFecha_vecimiento(Date fecha_vecimiento) {
+    public void setFecha_vecimiento(long fecha_vecimiento) {
         this.fecha_vecimiento = fecha_vecimiento;
     }
 
@@ -55,5 +56,6 @@ public class Medicamento {
     public void setPrecio(float precio) {
         this.precio = precio;
     }
+
     
 }

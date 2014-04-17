@@ -23,7 +23,7 @@ public class Guardarmedicamento {
    CallableStatement callate=  cone.prepareCall("{call guardar_medicamento(?,?,?,?)}");
    callate.setInt(1,u.getID_medicamento());
    callate.setString(2,u.getComposicion_quimica());
-   callate.setDate(3, u.getFecha_vecimiento());
+   callate.setLong(3,u.getFecha_vecimiento());
    callate.setFloat(4,u.getPrecio());
    callate.executeUpdate();
    callate.close();

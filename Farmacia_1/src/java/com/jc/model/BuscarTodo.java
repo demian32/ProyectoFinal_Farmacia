@@ -32,7 +32,7 @@ public class BuscarTodo {
                  while(res.next()){
                   int id=res.getInt(1);
                   String com=res.getString(2);
-                  Date fecha=res.getDate(3);
+                  long fecha=res.getLong(3);
                   Float pre=res.getFloat(4);
                   Medicamento u=new Medicamento(id,com,fecha,pre);
                   medi.add(u);

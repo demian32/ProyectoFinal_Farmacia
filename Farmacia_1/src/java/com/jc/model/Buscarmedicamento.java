@@ -6,6 +6,7 @@
 
 package com.jc.model;
 
+import static java.lang.System.out;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 
@@ -23,10 +24,11 @@ public class Buscarmedicamento {
      Connection cone=   con.conectarse();
    CallableStatement callate=  cone.prepareCall("{call buscar_medicamento(?)}");
    callate.setInt(1,u.getID_medicamento());
-   callate.executeUpdate();
+   System.out.println("Busqueda exitosa");
+   callate.getInt(u.getID_medicamento());
+   callate.getString(u.getComposicion_quimica());
    callate.close();
    cone.close();
-   System.out.println("Busqueda exitosa");
     
  }
     

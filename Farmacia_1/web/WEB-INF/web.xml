@@ -4,9 +4,17 @@
         <servlet-name>ServletBuscartodo</servlet-name>
         <servlet-class>com.jc.controladores.ServletBuscartodo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletAutenticar</servlet-name>
+        <servlet-class>com.jc.controladores.ServletAutenticar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletBuscartodo</servlet-name>
         <url-pattern>/BuscarTodo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAutenticar</servlet-name>
+        <url-pattern>/Usuarios</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

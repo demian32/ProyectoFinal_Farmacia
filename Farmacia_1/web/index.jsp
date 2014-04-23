@@ -9,6 +9,7 @@
 </head> 
 <body> 
 
+    
 <div data-role="page" id="inicio" data-theme="b">
 	<div data-role="header">
 		<h1>Farmaciaaa</h1>

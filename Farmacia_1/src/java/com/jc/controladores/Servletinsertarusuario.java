@@ -36,7 +36,7 @@ public class Servletinsertarusuario extends HttpServlet {
         PrintWriter out = response.getWriter();
         String mensaje="no guardado";
         
-        int Id_usuario=   Integer.parseInt(request.getParameter("Id_laboratorio"));
+        int Id_usuario=   Integer.parseInt(request.getParameter("Id_usuario"));
     String login = request.getParameter("login");
     String password=    request.getParameter("password");
     

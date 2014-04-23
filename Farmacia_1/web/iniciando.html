@@ -81,7 +81,10 @@
     <h1>Ver Medicamentos</h1>
   </div>
   <div data-role="content">
-    <a href="#" data-role="button" data-icon="search">Buscar todo</a>
+     <form action="ServletBuscartodo"  method="get">
+         <div><input type="submit" value="Buscar" id="search" />
+          Buscar todo
+        </div>
     <div data-role="fieldcontain">
         <div class="ui-grid-c" id="tabmedicamento">
             <div class="ui-block-a" id="idmedi"><b>ID_medicamento</b></div>
@@ -106,6 +109,7 @@
             <div class="ui-block-d" id="bloque5-4">Bloque  5,4</div>
         </div>
     </div>
+     </form>
   </div>
 </div>
 
@@ -115,12 +119,15 @@
     <h1>Buqueda por ID</h1>
   </div>
     <div data-role="content">
+        <form action="ServletBuscarmedicamento"  method="get">
         <div data-role="fieldcontain">
             <label for="textbuscar">ID:</label>
-            <input type="text" name="textbuscar" id="idmedi" value=""/>
-            <a id="busdelprod" data-role="button" data-icon="search">
-            Buscar Producto</a>
+            <input type="text" name="textbuscar" id="Id_medicamento" value=""/>
+            <div><input type="submit" value="Buscar1" id="search" />
+          Buscar Medicamento
         </div>
+        </div>
+        </form>
     </div>
 </div>
 <div data-role="page" id="Usuarios2">
@@ -128,15 +135,19 @@
         <a href="#Usuarios1" data-role="button" data-icon="home">Regresar</a>
         <h1>Alta de Usuarios</h1>
     </div>
+     <form action="Servletinsertarusuario"  method="post">
     <div data-role="content">
+       
             <label for="textnombre">Login:</label>
-            <input type="text" name="textnombre" id="newuser" value="" /><p>
+            <input type="text" name="textnombre" id="Login" value="" /><p>
             <label for="textpassword">Password:</label>
-            <input type="password" name="textpassword" id="newpass" 
+            <input type="password" name="textpassword" id="Password" 
             value="" /><p>
     </div>
-    <a id="altanewuser" data-role="button" data-icon="forward">
-    Crear Usuario</a>
+    <div><input type="submit" value="insertar" id="insertusu" />
+          Insertar Usurio
+        </div>
+     </form>
 </div>
 
 <div data-role="page" id="guardarmed">
@@ -144,113 +155,143 @@
         <a href="#Administracion1" data-role="button" data-icon="home">Regresar</a>
         <h1>Medicamento</h1>
     </div>
+    <form action="Servletguardarmedicamento"  method="get">
     <div data-role="content">
+        
             <label for="textnombre">Composicion:</label>
-            <input type="text" name="textnombre" id="newcomposicion" value="" /><p>
+            <input type="text" name="textnombre" id="composicion_quimica" value="" /><p>
             <label for="textprecio">Fecha de Vencimiento:</label>
-            <input type="text" name="textprecio" id="newfecha" 
+            <input type="text" name="textprecio" id="fecha" 
             value="" /><p>
             <label for="textexist">Precio:</label>
-            <input type="text" name="textexist" id="newprecio" value="" /><p>
+            <input type="text" name="textexist" id="precio" value="" /><p>
     </div>
-    <a id="altanewmedi" data-role="button" data-icon="forward">
-    Guardar Medicamento</a>
+    <div><input type="submit" value="guardar" id="guardarmedi" />
+          Guardar MEdicamento
+        </div>
+    </form>
 </div>
 <div data-role="page" id="guardarcon">
     <div data-role="header">
         <a href="#Administracion1" data-role="button" data-icon="home">Regresar</a>
         <h1>Concentracion</h1>
     </div>
+    <form action="Servletguardarconcentracion"  method="get">
     <div data-role="content">
+        
             <label for="textnombre">Id Medicamento:</label>
-            <input type="text" name="textnombre" id="newprod" value="" /><p>
+            <input type="text" name="textnombre" id="Id_medicamento" value="" /><p>
             <label for="textprecio">Nombre:</label>
-            <input type="text" name="textprecio" id="newprecio" 
+            <input type="text" name="textprecio" id="nombre" 
             value="" /><p>
     </div>
-    <a id="altanewprod" data-role="button" data-icon="forward">
-    Guardar Concentracion</a>
+    <div><input type="submit" value="guardar" id="guardarconc" />
+          Guardar Concentracion
+        </div>
+    </form>
 </div>
 <div data-role="page" id="guardarlab">
     <div data-role="header">
         <a href="#Administracion1" data-role="button" data-icon="home">Regresar</a>
         <h1>Laboratorio</h1>
     </div>
+     <form action="Servletguardarlaboratorio"  method="get">
     <div data-role="content">
+       
             <label for="textnombre">Id Medicamento</label>
-            <input type="text" name="textnombre" id="newidmedi" value="" /><p>
+            <input type="text" name="textnombre" id="Id_medicamento" value="" /><p>
             <label for="textprecio">Nombre:</label>
-            <input type="text" name="textprecio" id="newnombre" 
+            <input type="text" name="textprecio" id="nombre" 
             value="" /><p>
     </div>
-    <a id="altanewlabo" data-role="button" data-icon="forward">
-    Guardar Laboratorio</a>
+    <div><input type="submit" value="guardar" id="guardarlabor" />
+          Guardar Laboratorio
+        </div>
+     </form>
 </div>
 <div data-role="page" id="guardarnom">
     <div data-role="header">
         <a href="#Administracion1" data-role="button" data-icon="home">Regresar</a>
         <h1>Nombre Comercial</h1>
     </div>
+    <form action="Servletguardarnombrecomercial"  method="get">
     <div data-role="content">
+        
             <label for="textnombre">Id MEdicamento:</label>
-            <input type="text" name="textnombre" id="newidmedi" value="" /><p>
+            <input type="text" name="textnombre" id="Id_medicamento" value="" /><p>
             <label for="textprecio">Nombre:</label>
-            <input type="text" name="textprecio" id="newnombre" 
+            <input type="text" name="textprecio" id="nombre" 
             value="" /><p>
     </div>
-    <a id="altanewcomer" data-role="button" data-icon="forward">
-    Guardar Nombre Comercial</a>
+    <div><input type="submit" value="guardar" id="guardarnomb" />
+          Guardar Nombre Comercial
+        </div>
+    </form>
 </div>
 <div data-role="page" id="guardarpre">
     <div data-role="header">
         <a href="#Administracion1" data-role="button" data-icon="home">Regresar</a>
         <h1>Presentacion</h1>
     </div>
+    <form action="Servletguardarpresentacion"  method="get">
     <div data-role="content">
+        
             <label for="textnombre">Id Medicamento:</label>
-            <input type="text" name="textnombre" id="newidmedi" value="" /><p>
+            <input type="text" name="textnombre" id="Id_medicamento" value="" /><p>
             <label for="textprecio">Nombre:</label>
-            <input type="text" name="textprecio" id="newnombre" 
+            <input type="text" name="textprecio" id="nombre" 
             value="" /><p>
     </div>
-    <a id="altanewpres" data-role="button" data-icon="forward">
-    Guardar Presentacion</a>
+    <div><input type="submit" value="guardar" id="guardarpres" />
+          Guardar Presentacion
+        </div>
+    </form>
 </div>
 <div data-role="page" id="guardaruso">
     <div data-role="header">
         <a href="#Administracion1" data-role="button" data-icon="home">Regresar</a>
         <h1>Uso Terapeutico</h1>
     </div>
+    <form action="Servletguardarusoterapeutico"  method="get">
     <div data-role="content">
+        
             <label for="textnombre">Id Medicamento:</label>
-            <input type="text" name="textnombre" id="newidmedi" value="" /><p>
+            <input type="text" name="textnombre" id="Id_medicamento" value="" /><p>
             <label for="textprecio">Nombre:</label>
-            <input type="text" name="textprecio" id="newnombre" 
+            <input type="text" name="textprecio" id="nombre" 
             value="" /><p>
     </div>
-    <a id="altanewuso" data-role="button" data-icon="forward">
-    Guardar Uso Terapeutico</a>
+   <div><input type="submit" value="guardar" id="guardarusot" />
+          Guardar Uso terapeutico
+        </div>
+    </form>
 </div>
 <div data-role="page" id="actualizar">
     <div data-role="header">
         <a href="#Administracion1" data-role="button" data-icon="home">Regresar</a>
         <h1>Actualizar Medicamento</h1>
     </div>
+    <form action="Servletactualizar"  method="get">
     <div data-role="content">
+        <form action="ServletBuscarmedicamento"  method="get">
         <label for="textbuscar">ID:</label>
-        <input type="text" name="textbuscar" id="idmedi" value=""/>
-        <a id="busmedi" data-role="button" data-icon="search">
-        Buscar Medicamento</a><p>
+        <input type="text" name="textbuscar" id="Id_medicamento" value=""/>
+        <div><input type="submit" value="Buscar1" id="search" />
+          Buscar Medicamento
+        </div>
             <label for="textnombre">composicion quimica:</label>
-            <input type="text" name="textnombre" id="mbuscom" value="" /><p>
+            <input type="text" name="textnombre" id="composicion_quimica" value="" /><p>
             <label for="textprecio">fecha de vencimiento:</label>
-            <input type="text" name="textprecio" id="mbusfecha" 
+            <input type="text" name="textprecio" id="fecha" 
             value="" /><p>
             <label for="textexist">precio:</label>
-            <input type="text" name="textexist" id="mbusprecio" value="" /><p>
+            <input type="text" name="textexist" id="precio" value="" /><p>
+        </form>
     </div>
-    <a id="actmedi" data-role="button" data-icon="forward">
-    Actualizar</a>
+    <div><input type="submit" value="actualizar" id="actu" />
+          Actualizar
+        </div>
+    </form>
 </div>
 
 <div data-role="page" id="eliminar">
@@ -258,19 +299,28 @@
         <a href="#Administracion1" data-role="button" data-icon="home">Regresar</a>
         <h1>Eliminar</h1>
     </div>
+    
+    <form action="Servleteliminar"  method="get">
     <div data-role="content">
+        <form action="ServletBuscarmedicamento"  method="get">
         <div data-role="fieldcontain">
             <label for="textbuscar">ID:</label>
-            <input type="text" name="textbuscar" id="idmedi" value=""/>
-            <a id="busmedi" data-role="button" data-icon="search">
-            Buscar Medicamento</a>
+            <input type="text" name="textbuscar" id="Id_medicamento" value=""/>
+            <div><input type="submit" value="Buscar1" id="search" />
+          Buscar Medicamento
         </div>
+        </div>
+        </form>
         <div data-role="fieldcontain">
-            <a id="eliminarmedi" data-role="button" data-icon="forward">
-            Eliminar Medicamento</a>
+           <div><input type="submit" value="eliminar" id="eliminarmed" />
+          Eliminar Medicamento
+        </div>
         </div>
     </div>
+    </form>
 </div>
 
 </body>
+
+
 </html>

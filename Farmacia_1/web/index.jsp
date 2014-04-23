@@ -15,7 +15,6 @@
 	</div>
 	<div data-role="content">	
 	<div align="center">
-    <img src="user.png" width="200" height="200">
     </div>
     </div>
     <div align="center">
@@ -30,14 +29,13 @@
   </div>
   
         <div><input type="submit" value="Entrar" id="entrar" />
-           
+           ${valor}
         </div>
                 
    
             
         </form>
         <div >
-            <h1>    ${valor} </h1>
         </div>
    </div>
 	<div data-role="footer" data-position="fixed">

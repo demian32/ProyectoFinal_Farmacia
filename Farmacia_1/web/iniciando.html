@@ -6,10 +6,6 @@
 <link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
 <script src="jquery-1.6.4.min.js" type="text/javascript"></script>
 <script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
-<script>
-
-</script>
-
 </head> 
 <body>
 
@@ -87,11 +83,11 @@
   <div data-role="content">
     <a href="#" data-role="button" data-icon="search">Buscar todo</a>
     <div data-role="fieldcontain">
-        <div class="ui-grid-c" id="tabproductos">
-            <div class="ui-block-a" id="idshprod"><b>ID_medicamento</b></div>
-            <div class="ui-block-b" id="shprod"><b>composicion_quimica</b></div>
-            <div class="ui-block-c" id="shprecio"><b>fecha_vencimiento</b></div>
-            <div class="ui-block-d" id="shexist"><b>precio</b></div>
+        <div class="ui-grid-c" id="tabmedicamento">
+            <div class="ui-block-a" id="idmedi"><b>ID_medicamento</b></div>
+            <div class="ui-block-b" id="buscom"><b>composicion_quimica</b></div>
+            <div class="ui-block-c" id="bufe"><b>fecha_vencimiento</b></div>
+            <div class="ui-block-d" id="bupre"><b>precio</b></div>
             <div class="ui-block-a" id="bloque2-1">Bloque  2,1</div>
             <div class="ui-block-b" id="bloque2-2">Bloque  2,2</div>
             <div class="ui-block-c" id="bloque2-3">Bloque  2,3</div>
@@ -121,7 +117,7 @@
     <div data-role="content">
         <div data-role="fieldcontain">
             <label for="textbuscar">ID:</label>
-            <input type="text" name="textbuscar" id="idelprod" value=""/>
+            <input type="text" name="textbuscar" id="idmedi" value=""/>
             <a id="busdelprod" data-role="button" data-icon="search">
             Buscar Producto</a>
         </div>
@@ -150,14 +146,14 @@
     </div>
     <div data-role="content">
             <label for="textnombre">Composicion:</label>
-            <input type="text" name="textnombre" id="newprod" value="" /><p>
+            <input type="text" name="textnombre" id="newcomposicion" value="" /><p>
             <label for="textprecio">Fecha de Vencimiento:</label>
-            <input type="text" name="textprecio" id="newprecio" 
+            <input type="text" name="textprecio" id="newfecha" 
             value="" /><p>
             <label for="textexist">Precio:</label>
-            <input type="text" name="textexist" id="newexist" value="" /><p>
+            <input type="text" name="textexist" id="newprecio" value="" /><p>
     </div>
-    <a id="altanewprod" data-role="button" data-icon="forward">
+    <a id="altanewmedi" data-role="button" data-icon="forward">
     Guardar Medicamento</a>
 </div>
 <div data-role="page" id="guardarcon">
@@ -182,12 +178,12 @@
     </div>
     <div data-role="content">
             <label for="textnombre">Id Medicamento</label>
-            <input type="text" name="textnombre" id="newprod" value="" /><p>
+            <input type="text" name="textnombre" id="newidmedi" value="" /><p>
             <label for="textprecio">Nombre:</label>
-            <input type="text" name="textprecio" id="newprecio" 
+            <input type="text" name="textprecio" id="newnombre" 
             value="" /><p>
     </div>
-    <a id="altanewprod" data-role="button" data-icon="forward">
+    <a id="altanewlabo" data-role="button" data-icon="forward">
     Guardar Laboratorio</a>
 </div>
 <div data-role="page" id="guardarnom">
@@ -197,12 +193,12 @@
     </div>
     <div data-role="content">
             <label for="textnombre">Id MEdicamento:</label>
-            <input type="text" name="textnombre" id="newprod" value="" /><p>
+            <input type="text" name="textnombre" id="newidmedi" value="" /><p>
             <label for="textprecio">Nombre:</label>
-            <input type="text" name="textprecio" id="newprecio" 
+            <input type="text" name="textprecio" id="newnombre" 
             value="" /><p>
     </div>
-    <a id="altanewprod" data-role="button" data-icon="forward">
+    <a id="altanewcomer" data-role="button" data-icon="forward">
     Guardar Nombre Comercial</a>
 </div>
 <div data-role="page" id="guardarpre">
@@ -212,12 +208,12 @@
     </div>
     <div data-role="content">
             <label for="textnombre">Id Medicamento:</label>
-            <input type="text" name="textnombre" id="newprod" value="" /><p>
+            <input type="text" name="textnombre" id="newidmedi" value="" /><p>
             <label for="textprecio">Nombre:</label>
-            <input type="text" name="textprecio" id="newprecio" 
+            <input type="text" name="textprecio" id="newnombre" 
             value="" /><p>
     </div>
-    <a id="altanewprod" data-role="button" data-icon="forward">
+    <a id="altanewpres" data-role="button" data-icon="forward">
     Guardar Presentacion</a>
 </div>
 <div data-role="page" id="guardaruso">
@@ -227,12 +223,12 @@
     </div>
     <div data-role="content">
             <label for="textnombre">Id Medicamento:</label>
-            <input type="text" name="textnombre" id="newprod" value="" /><p>
+            <input type="text" name="textnombre" id="newidmedi" value="" /><p>
             <label for="textprecio">Nombre:</label>
-            <input type="text" name="textprecio" id="newprecio" 
+            <input type="text" name="textprecio" id="newnombre" 
             value="" /><p>
     </div>
-    <a id="altanewprod" data-role="button" data-icon="forward">
+    <a id="altanewuso" data-role="button" data-icon="forward">
     Guardar Uso Terapeutico</a>
 </div>
 <div data-role="page" id="actualizar">
@@ -242,18 +238,18 @@
     </div>
     <div data-role="content">
         <label for="textbuscar">ID:</label>
-        <input type="text" name="textbuscar" id="idmodprod" value=""/>
-        <a id="busmodprod" data-role="button" data-icon="search">
+        <input type="text" name="textbuscar" id="idmedi" value=""/>
+        <a id="busmedi" data-role="button" data-icon="search">
         Buscar Medicamento</a><p>
             <label for="textnombre">composicion quimica:</label>
-            <input type="text" name="textnombre" id="modprod" value="" /><p>
+            <input type="text" name="textnombre" id="mbuscom" value="" /><p>
             <label for="textprecio">fecha de vencimiento:</label>
-            <input type="text" name="textprecio" id="modprecio" 
+            <input type="text" name="textprecio" id="mbusfecha" 
             value="" /><p>
             <label for="textexist">precio:</label>
-            <input type="text" name="textexist" id="modexist" value="" /><p>
+            <input type="text" name="textexist" id="mbusprecio" value="" /><p>
     </div>
-    <a id="modificarprod" data-role="button" data-icon="forward">
+    <a id="actmedi" data-role="button" data-icon="forward">
     Actualizar</a>
 </div>
 
@@ -265,12 +261,12 @@
     <div data-role="content">
         <div data-role="fieldcontain">
             <label for="textbuscar">ID:</label>
-            <input type="text" name="textbuscar" id="idelprod" value=""/>
-            <a id="busdelprod" data-role="button" data-icon="search">
+            <input type="text" name="textbuscar" id="idmedi" value=""/>
+            <a id="busmedi" data-role="button" data-icon="search">
             Buscar Medicamento</a>
         </div>
         <div data-role="fieldcontain">
-            <a id="eliminarprod" data-role="button" data-icon="forward">
+            <a id="eliminarmedi" data-role="button" data-icon="forward">
             Eliminar Medicamento</a>
         </div>
     </div>
